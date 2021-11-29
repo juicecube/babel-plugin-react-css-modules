@@ -431,7 +431,7 @@ import './bar.css';
 Output:
 
 ```js
-import _getClassName from 'babel-plugin-react-css-modules/dist/browser/getClassName';
+import _getClassName from '@mlz/babel-plugin-react-css-modules/dist/browser/getClassName';
 import foo from './bar.css';
 
 const _styleModuleImportMap = {
