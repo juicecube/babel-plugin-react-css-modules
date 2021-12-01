@@ -99,7 +99,7 @@ export default (cssSourceFilePath: string, options: OptionsType): StyleModuleMap
   let runner;
 
   let generateScopedName;
-
+  console.log(generateScopedName);
   if (options.generateScopedName && typeof options.generateScopedName === 'function') {
     generateScopedName = options.generateScopedName;
   } else {
@@ -124,10 +124,10 @@ export default (cssSourceFilePath: string, options: OptionsType): StyleModuleMap
     Values,
     LocalByDefault,
     ExtractImports,
-    new Scope({
+    Scope({
       generateScopedName
     }),
-    new Parser({
+    Parser({
       fetch
     })
   ];
