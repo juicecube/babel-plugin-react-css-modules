@@ -140,6 +140,12 @@ export default ({
       return true;
     }
 
+    const extension = path.node.source.value.lastIndexOf('.') > -1 ? path.node.source.value.substr(path.node.source.value.lastIndexOf('.')) : null;
+
+    if (extension !== '.css' && Object.keys(stats.opts.filetypes).indexOf(extension) < 0) {
+      return true;
+    }
+
     const filename = getTargetResourcePath(path, stats);
 
     if (stats.opts.exclude && isFilenameExcluded(filename, stats.opts.exclude)) {
