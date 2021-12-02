@@ -99,7 +99,6 @@ export default (cssSourceFilePath: string, options: OptionsType): StyleModuleMap
   let runner;
 
   let generateScopedName;
-  console.log(generateScopedName);
   if (options.generateScopedName && typeof options.generateScopedName === 'function') {
     generateScopedName = options.generateScopedName;
   } else {
